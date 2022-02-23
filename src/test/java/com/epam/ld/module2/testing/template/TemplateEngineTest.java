@@ -1,39 +1,61 @@
 package com.epam.ld.module2.testing.template;
 
+import com.epam.ld.module2.testing.Client;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import java.io.IOException;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class TemplateEngineTest {
     @Test
     public void generateTemplateTest(){
-        fail();
+        Template template = new Template("Igor" , "Lyakhov");
+        assertNotNull(template);
     }
 
     @Test
     public void getClientAddressTest(){
-        fail("Not implementation");
+        Client client = new Client("Lenina");
+        String address = client.getAddresses();
+        assertEquals("Lenina", address);
     }
 
     @Test
     public void setClientAddressTest(){
-        fail("Not implementation");
+        Client client = new Client("Lenina");
+        client.setAddresses("Mira");
+        String address = client.getAddresses();
+        assertEquals("Mira", address);
     }
 
     @Test
-    public void generateMessageTest(){
-        fail("Not implementation");
+    public void generateMessageTest() throws Exception {
+        TemplateEngine templateEngine = new TemplateEngine();
+        Template template = new Template("Igor", "Lyakhov");
+        Client client = new Client("Lenina");
+        String message = templateEngine.generateMessage(template,client);
+        assertEquals("Hello, my name is Igor!!!", message);
     }
 
     @Test
     public void withoutOneValuesTemplateTest(){
-        fail("Not implementation");
+        TemplateEngine templateEngine = new TemplateEngine();
+        Template template = new Template("Igor", null);
+        Exception thrown = Assertions.assertThrows(Exception.class, () -> {
+            templateEngine.generateMessage(template,new Client("Lenina"));
+        });
     }
 
     @Test
-    public void extraValuesInTemplateTest(){
-        fail("Not implementation");
+    public void extraValuesInTemplateTest() throws Exception {
+        TemplateEngine templateEngine = new TemplateEngine();
+        Template template = new Template("Igor", "Lyakhov");
+        Client client = new Client("Lenina");
+        String message = templateEngine.generateMessage(template,client);
+        assertEquals("Hello, my name is Igor!!!", message);
     }
 
     @Test

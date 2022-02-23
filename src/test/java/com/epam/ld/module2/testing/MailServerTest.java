@@ -26,7 +26,4 @@ public class MailServerTest {
     public void replacesVariableTest(){
         fail("Not implementation");
     }
-
-
-
 }

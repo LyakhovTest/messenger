@@ -6,6 +6,10 @@ package com.epam.ld.module2.testing;
 public class Client {
     private String addresses;
 
+    public Client(String addresses) {
+        this.addresses = addresses;
+    }
+
     /**
      * Gets addresses.
      *
