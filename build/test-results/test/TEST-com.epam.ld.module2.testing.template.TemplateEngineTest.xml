@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.epam.ld.module2.testing.template.TemplateEngineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-23T23:00:41" hostname="DESKTOP-H6I97TM" time="0.107">
+  <properties/>
+  <testcase name="extraValuesInTemplateTest()" classname="com.epam.ld.module2.testing.template.TemplateEngineTest" time="0.107"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
