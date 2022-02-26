@@ -3,17 +3,20 @@ package com.epam.ld.module2.testing.template;
 import com.epam.ld.module2.testing.Client;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.io.IOException;
+import org.junit.jupiter.api.condition.EnabledOnJre;
+import org.junit.jupiter.api.condition.JRE;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
+//@ExtendWith(MockitoExtension.class)
 public class TemplateEngineTest {
     @Test
+    @EnabledOnJre(JRE.JAVA_8)
     public void generateTemplateTest(){
         Template template = new Template("Igor" , "Lyakhov");
         assertNotNull(template);
+
     }
 
     @Test
@@ -56,10 +59,5 @@ public class TemplateEngineTest {
         Client client = new Client("Lenina");
         String message = templateEngine.generateMessage(template,client);
         assertEquals("Hello, my name is Igor!!!", message);
-    }
-
-    @Test
-    public void supportBracketValuesTest(){
-        fail("Not implementation");
     }
 }

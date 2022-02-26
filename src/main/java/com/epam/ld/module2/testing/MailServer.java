@@ -11,6 +11,9 @@ public class MailServer {
      * @param addresses  the addresses
      * @param messageContent the message content
      */
-    public void send(String addresses, String messageContent) {
+    public void send(String addresses, String messageContent) throws Exception {
+        if(messageContent==null) throw new Exception("There is no message to send!");
+        if(addresses==null) throw new Exception("Отправка сообщения невозможна! Адрес отсутствует");
+        System.out.println("Message was send to "+ addresses);
     }
 }
