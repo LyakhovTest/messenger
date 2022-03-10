@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="7.6.1">
+<file name="C:\Users\Igorj\Desktop\messenger\src\main\java\com\epam\ld\module2\testing\Client.java">
+</file>
+<file name="C:\Users\Igorj\Desktop\messenger\src\main\java\com\epam\ld\module2\testing\MailServer.java">
+<error line="14" column="70" severity="error" message="Expected @throws tag for &apos;Exception&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="15" severity="error" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="16" severity="error" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+</file>
+<file name="C:\Users\Igorj\Desktop\messenger\src\main\java\com\epam\ld\module2\testing\Messenger.java">
+<error line="34" column="70" severity="error" message="Expected @throws tag for &apos;Exception&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Igorj\Desktop\messenger\src\main\java\com\epam\ld\module2\testing\template\Template.java">
+</file>
+<file name="C:\Users\Igorj\Desktop\messenger\src\main\java\com\epam\ld\module2\testing\template\TemplateEngine.java">
+<error line="21" column="76" severity="error" message="Expected @throws tag for &apos;Exception&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+</checkstyle>

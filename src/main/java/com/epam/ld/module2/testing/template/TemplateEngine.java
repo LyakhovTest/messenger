@@ -22,7 +22,7 @@ public class TemplateEngine {
         if(template.getName()==null||template.getSurname()==null){
             throw new Exception("Bull shit");
         }
-       return new String(Files.readAllBytes(Paths.get("C:\\Users\\Igorj\\Desktop\\messenger\\src\\text.txt")))
+       return new String(Files.readAllBytes(Paths.get("text.txt")))
                .replace("#{Name}", template.getName()).replace("#{SurName}", template.getSurname());
     }
 }
